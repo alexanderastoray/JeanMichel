@@ -3,8 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { IndexComponent } from './index/index.component';
 import { ColletionComponent } from './colletion/colletion.component';
 
-const routes: Routes = [];
-
 export const appRouteList: Routes = [
   {
       path: 'index',
