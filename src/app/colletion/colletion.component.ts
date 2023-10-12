@@ -1,6 +1,8 @@
+import { NgModule } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
-
-declare var $: any;
+import * as $ from 'jquery'; 
+import { NgxMasonryModule } from 'ngx-masonry';
+import * as Masonry from 'masonry-layout';
 
 @Component({
   selector: 'app-colletion',
@@ -9,7 +11,13 @@ declare var $: any;
 })
 
 export class ColletionComponent implements OnInit {
+
+  @NgModule({
+    imports: [NgxMasonryModule]
+  })
+  
   ngOnInit() { 
+    /*
     var $grid = $('.grid').isotope({
       itemSelector: 'article'
     });
@@ -23,6 +31,6 @@ export class ColletionComponent implements OnInit {
     
     $(window).bind("load", function() {
       $('#all').click();
-    });
+    });*/
 } 
 }
