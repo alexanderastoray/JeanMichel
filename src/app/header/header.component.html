@@ -1,4 +1,4 @@
 	<!-- Header -->
-	<header id="head-index" [ngStyle]="{'background-image': 'url(/assets/images/' + getImageHeader() + ')'}">
+	<header id="{{pageType=='index' ? 'head-index' : 'head-page'}}" [ngStyle]="{'background-image': 'url(/assets/images/header/' + getImageHeader() + ')'}">
 	</header>
 	<!-- /Header -->

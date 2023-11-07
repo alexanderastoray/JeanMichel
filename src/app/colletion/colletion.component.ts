@@ -1,8 +1,5 @@
-import { NgModule } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery'; 
-import { NgxMasonryModule } from 'ngx-masonry';
-import * as Masonry from 'masonry-layout';
 
 @Component({
   selector: 'app-colletion',
@@ -10,27 +7,19 @@ import * as Masonry from 'masonry-layout';
   styleUrls: ['./colletion.component.scss']
 })
 
-export class ColletionComponent implements OnInit {
+export class ColletionComponent implements OnInit  {
 
-  @NgModule({
-    imports: [NgxMasonryModule]
-  })
-  
-  ngOnInit() { 
-    /*
-    var $grid = $('.grid').isotope({
-      itemSelector: 'article'
-    });
-    
-    // filter buttons
-    $('.filters-button-group').on( 'click', 'button', function() {
-      alert("Xddd");
-      var filterValue = $().attr('data-filter');
-      $grid.isotope({ filter: filterValue });
-    });
-    
-    $(window).bind("load", function() {
-      $('#all').click();
-    });*/
-} 
+	  masonryItems = [
+		{src: "https://source.unsplash.com/433x649/?Uruguay"},
+		{src: "https://source.unsplash.com/530x572/?Jamaica"},
+		{src: "https://source.unsplash.com/531x430/?Kuwait"},
+		{src: "https://source.unsplash.com/586x1073/?Bermuda"},
+		{src: "https://source.unsplash.com/500x571/?Ecuador"},
+		{src: "https://source.unsplash.com/503x548/?Angola"},
+		{src: "https://source.unsplash.com/511x630/?Mauritania"}
+	  ];
+
+	  constructor() { }
+	
+	  ngOnInit(): void { }
 }

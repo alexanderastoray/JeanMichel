@@ -13,38 +13,37 @@ export class HeaderComponent implements OnInit{
   headers = [
     {
       page: "index",
-      image: "header_index.jpg"
+      image: "bg_header.jpg"
     },
     {
-      page: "gallery",
-      image: "header_gallery.jpg"
+      page: "colletions",
+      image: "bg_header.jpg"
     },
     {
       page: "exhibitions",
-      image: "header_exhibitions.jpg"
+      image: "bg_exhibitions.jpg"
     },
     {
       page: "about",
-      image: "header_about.jpg"
+      image: "bg_about.jpg"
     },
     {
       page: "events",
-      image: "header_events.jpg"
+      image: "bg_events.jpg"
     },
     {
       page: "contact",
-      image: "header_contact.jpg"
+      image: "bg_contact.jpg"
     }
   ]
 
   constructor() {}
 
   ngOnInit(): void {
-    
   }
 
   getImageHeader(){
-    return this.imageHeader
+    return this.headers.find((header) => header.page.match(this.pageType))?.image;
   }
 
 }

@@ -12,6 +12,8 @@ import { AboutComponent } from './about/about.component';
 import { EventsComponent } from './events/events.component';
 import { ColletionComponent } from './colletion/colletion.component';
 import { ExhibitionsComponent } from './exhibitions/exhibitions.component';
+import { NgxMasonryModule } from 'ngx-masonry';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { ExhibitionsComponent } from './exhibitions/exhibitions.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxMasonryModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
