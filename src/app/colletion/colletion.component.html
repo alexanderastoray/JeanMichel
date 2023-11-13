@@ -1,21 +1,15 @@
 <app-header pageType="colletions"></app-header>
-<div class="button-group filters-button-group">
-    <button class="button is-checked" data-filter="*">all</button>
-    <button class="button" data-filter=".beach">beach</button>
-    <button class="button" data-filter=".bird">bird</button>
-    <button class="button" data-filter=".boat">boat</button>
-    <button class="button" data-filter=".lighthouse">lighthouse</button>
-    <button class="button" data-filter=".people">people</button>
-    <button class="button" data-filter=".rock">rock</button>
-    <button class="button" data-filter=".sea">sea</button>
-</div>
-
-<div class="masonry-demo">
-  <div class="container pt-5">
+<ul>
+    <li><a href="#">Toutes</a></li>
+    <li><a href="#">Murale</a></li>
+    <li><a href="#">Socle</a></li>
+    <li><a href="#">Extérieure</a></li>
+    <li><a href="#">Privé</a></li>
+</ul>
+<div class="masonry">
     <ngx-masonry>
         <div ngxMasonryItem class="masonry-item" *ngFor="let item of masonryItems">
-            <img src="{{ item.src }}">
+            <img src="/assets/images/gallery/{{ item.collection }}/{{ item.fileName }}">
        </div>
     </ngx-masonry>
-</div>
 </div>
